@@ -13,7 +13,7 @@ myApp.controller("PaymentsCtrl", [ '$scope', '$rootScope', 'StellarApi', 'FedNam
 			$scope.loading = false;
 			if (err) {
 				$scope.error_msg = StellarApi.getErrMsg(err);
-			} else {
+			} else {				
 				$scope.error_msg = "";
 				$scope.payments = payments;
 				$scope.updateTx(0);
@@ -104,11 +104,14 @@ myApp.controller("TradesCtrl", [ '$scope', '$rootScope', 'StellarApi',
  			$scope.loading = false;
  			if (err) {
  				$scope.error_msg = StellarApi.getErrMsg(err);
- 			} else {
+ 			} else {				 
  				$scope.error_msg = "";
- 				trades.forEach(function(item){
+ 				trades.forEach(function(item){					
  					if (item.operation_count == 1) {
- 						item.type = item.tx.operations[0].type;
+						 item.type = item.tx.operations[0].type;
+						 if(item.tx.operations[0].asset.code==='XLM') {
+							item.tx.operations[0].asset.code = 'MAS';
+						 }						 
  					} else {
  						item.type = 'batch';
  					}
@@ -256,7 +259,7 @@ function copyAmount(res, fx, prefix) {
 
 	res[`${prefix}amount`] = fx[`${prefix}amount`];
 	if (fx[`${prefix}asset_type`] === 'native') {
-		res[`${prefix}asset_code`] = 'XLM';
+		res[`${prefix}asset_code`] = 'MAS';
 	} else {
 		res[`${prefix}asset_code`] = fx[`${prefix}asset_code`];
 		res[`${prefix}asset_issuer`] = fx[`${prefix}asset_issuer`];

@@ -1,8 +1,12 @@
 {
-  "name": "StellarWallet",
+  "name": "MassonCurrencyWallet",
   "version": "1.0.0",
   "main": "main.js",
+  "chromium-args": "--enable-logging=stderr",
   "window": {
-  	"icon": "img/rocket.png"
+    "icon": "img/maslogo_96.png",
+    "toolbar": true,
+    "frame": true,    
+    "show_in_taskbar": true
   }
 }

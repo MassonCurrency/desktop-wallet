@@ -42,13 +42,13 @@ myApp.factory('SettingFactory', function($window) {
 			if ($window.localStorage['stellar_url']) {
 				return $window.localStorage['stellar_url'];
 			}
-			return this.getLang() == 'cn' ? "https://horizon.stellar.org" : 'https://horizon.stellar.org';
+			return this.getLang() == 'cn' ? "https://horizon.massoncurrency.org" : 'https://horizon.massoncurrency.org';
 		},
 		setTestUrl : function(url) {
 			$window.localStorage['test_url'] = url;
 		},
 		getTestUrl : function(url) {
-			return $window.localStorage['test_url'] || "https://horizon-testnet.stellar.org";
+			return $window.localStorage['test_url'] || "https://horizon-testnet.massoncurrency.org";
 		},
 		setOtherUrl : function(url) {
 			$window.localStorage['other_url'] = url;
@@ -87,7 +87,7 @@ myApp.factory('SettingFactory', function($window) {
 				return JSON.parse($window.localStorage['tradepair']);
 			} else {
 				return {
-					base_code   : 'XLM',
+					base_code   : 'MAS',
 					base_issuer : '',
 					counter_code   : 'CNY',
 					counter_issuer : 'GAREELUB43IRHWEASCFBLKHURCGMHE5IF6XSE7EXDLACYHGRHM43RFOX'

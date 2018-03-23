@@ -37,7 +37,7 @@ myApp.controller("BalanceCtrl", [ '$scope', '$rootScope', '$http', 'StellarApi',
 	$scope.price = {};
 	$scope.getPrice = function(code, issuer, callback) {
 		var base = {code: code, issuer: issuer};
-		var counter = {code: 'XLM', issuer: ''};
+		var counter = {code: 'MAS', issuer: ''};
 		StellarApi.queryBook(base, counter, function(err, data) {
 			if (err) {
 				console.error('Price ' + base + '.' + issuer, err);

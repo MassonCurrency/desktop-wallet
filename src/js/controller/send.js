@@ -48,7 +48,7 @@ myApp.controller("SendCtrl", ['$scope', '$rootScope', 'StellarApi', 'SettingFact
 		$scope.asset.website = gateway.website;
 	};
 	$scope.isLine = function(code, issuer) {
-		if (code == 'XLM') {
+		if (code == 'MAS') {
 			return code == $scope.asset.code;
 		} else {
 			return code == $scope.asset.code && issuer == $scope.asset.issuer;
@@ -297,14 +297,14 @@ myApp.controller("SendCtrl", ['$scope', '$rootScope', 'StellarApi', 'SettingFact
 					$scope.real_not_fund = true;
 					var gateway = $rootScope.gateways.getSourceById('');
 					$scope.send.unshift({
-						code   : 'XLM',
+						code   : 'MAS',
 						issuer : '',
 						name   : gateway.name,
 						logo   : gateway.logo
 					});
 					
-					if ($scope.asset.code !== 'XLM') {
-						$scope.pick('XLM', '');
+					if ($scope.asset.code !== 'MAS') {
+						$scope.pick('MAS', '');
 					}
 				} else {
 					console.error('resolveAccountInfo', err);
@@ -314,8 +314,8 @@ myApp.controller("SendCtrl", ['$scope', '$rootScope', 'StellarApi', 'SettingFact
 				var code, issuer, name, logo;
 				data.balances.forEach(function(line){
 					if (line.asset_type == 'native') {
-						accept.push('XLM');
-						code = 'XLM';
+						accept.push('MAS');
+						code = 'MAS';
 						issuer = '';
 					} else {
 						if (accept.indexOf(line.asset_code) < 0) {
@@ -349,6 +349,8 @@ myApp.controller("SendCtrl", ['$scope', '$rootScope', 'StellarApi', 'SettingFact
 		StellarApi.send($scope.real_address, $scope.asset.code, $scope.asset.issuer, 
 				$scope.asset.amount, $scope.memo_type, $scope.memo, function(err, hash){
 			$scope.sending = false;
+
+			console.log('SEND RESULT', err);
 			
 			if (err) {
 				if (err.message) {

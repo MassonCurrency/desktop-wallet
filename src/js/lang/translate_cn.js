@@ -70,7 +70,7 @@ var translate_cn = {
 	select_asset : '请先选择要发送的资产。',
 	sending_to   : '正在发送到',
 	send_done    : '发送成功',
-	not_funded   : '未激活。请发送至少1个XLM创建该账号。最好发3个。',
+	not_funded   : '未激活。请发送至少1个MAS创建该账号。最好发3个。',
 	can_accept   : '账号可接收',
 
 	/** Convert **/
@@ -180,11 +180,11 @@ var translate_cn = {
 	save     : '保存',
 	security : '安全',
 	inflation : '通胀地址',
-	inflation_desc : '恒星币每年通胀率为1%。当通胀地址得到的票数超过0.05%的总量时，就能从每周的分发中得到利息。1万个XLM每周约得到2个XLM。',
+	inflation_desc : '恒星币每年通胀率为1%。当通胀地址得到的票数超过0.05%的总量时，就能从每周的分发中得到利息。1万个MAS每周约得到2个MAS。',
 	inflation_done : '通胀地址设置成功',
 	inflation_options      : '社区通胀池',
 	inflation_options_desc : '你可以加入以下通胀池来得到每周的利息，不同的池子可能会收不同的手续费。',
-	inflation_xlmpool  : '加入xlmpool通胀池',
+	inflation_MASpool  : '加入MASpool通胀池',
 	inflation_lumenaut : '加入lumenaut通胀池',
 	inflation_moonpool : '加入MoonPool通胀池',
     inflation_donation : '支持我们',
@@ -196,13 +196,13 @@ var translate_cn = {
 	domain_desc : '账号可设置一个域名。在某些场景下，可通过域名取得更多的帮助信息。',
 	domain_done : '域名设置成功',
 	manage_data : '数据',
-	data_desc1  : '你可以给账号设置任意多的数据项（名称和值），每个数据项都会冻结相应的流明币XLM。',
+	data_desc1  : '你可以给账号设置任意多的数据项（名称和值），每个数据项都会冻结相应的流明币MAS。',
 	data_desc2  : '数据项可用于各种应用，恒星核心协议并不直接使用它们。',
 	data_key    : '名称',
 	data_value  : '值',
 	data_done   : '数据项设置成功',
 	delete_account : '删除账户',
-	merge_desc     : '危险！此操作将你持有的XLM转移到目标账户，你的账户将从账本中删除！',
+	merge_desc     : '危险！此操作将你持有的MAS转移到目标账户，你的账户将从账本中删除！',
 	dest_account   : '目标账户',
 	delete_warning : '我明白所有风险 >>',
 	back           : '返回',
@@ -235,6 +235,6 @@ var translate_cn = {
 	logout : '注销',
 
 	/** Error **/
-	NotFoundError : '恒星网络未找到该账号，请先激活此账号。激活需要至少1 XLM。每个授信和委托单需要额外冻结0.5 XLM，建议至少用3 XLM完成激活。',
-	changeTrustLowReserve : '恒星资金不足，无法授信新资产。每个授信需要额外冻结0.5 XLM。'
+	NotFoundError : '恒星网络未找到该账号，请先激活此账号。激活需要至少1 MAS。每个授信和委托单需要额外冻结0.5 MAS，建议至少用3 MAS完成激活。',
+	changeTrustLowReserve : '恒星资金不足，无法授信新资产。每个授信需要额外冻结0.5 MAS。'
 }

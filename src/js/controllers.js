@@ -52,18 +52,18 @@ myApp.controller("HomeCtrl", ['$scope', '$rootScope', 'RemoteFactory',
 		
 		$scope.pie.total = 0;
 		$rootScope.stellar_ticker.assets.forEach(function(asset){
-			if (asset.code == 'XLM') {
-				//$scope.pie.total = asset.volume24h_XLM;
+			if (asset.code == 'MAS') {
+				//$scope.pie.total = asset.volume24h_MAS;
 			} else {
-				if (asset.volume24h_XLM) {
-					$scope.pie.total += asset.volume24h_XLM;
+				if (asset.volume24h_MAS) {
+					$scope.pie.total += asset.volume24h_MAS;
 					//$scope.pie.labels.push(asset.slug);
-					//$scope.pie.data.push(round(asset.volume24h_XLM, 0));
+					//$scope.pie.data.push(round(asset.volume24h_MAS, 0));
 					$scope.data.push({
 						slug: asset.slug,
 						curr: asset.code, 
 						domain: asset.domain, 
-						volume: asset.volume24h_XLM, 
+						volume: asset.volume24h_MAS, 
 						pct: 0
 					});
 				}

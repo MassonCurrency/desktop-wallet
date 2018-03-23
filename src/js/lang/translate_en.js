@@ -1,5 +1,5 @@
 var translate_en = {
-	header_wellcome : 'Stellar is a platform that connects banks, payments systems, and people.',
+	header_wellcome : 'Masson Currency is a cryptocurrency with functionality, reliability and cutting edge technology.',
 	login_desc : 'You can only use a secret key to access an existing account. This is because the desktop client stores your login information locally on your computer, so your account is as safe as the security of your personal computer.',
 	open_account : 'Open account',
 	select_file : 'Select account file',
@@ -24,7 +24,7 @@ var translate_en = {
 	security_notice : 'The secret key below gives access to your money in the unlikely case that you lose your password. With this secret key alone anyone can retrieve your money. So please store it somewhere PRIVATE AND SAFE.',
 	show_password : 'Show password',
 	hide_password : 'Hide password',
-	stellar_address : 'Stellar address',
+	stellar_address : 'Masson Currency address',
 	secret_key : 'Secret key and QRCode:',
 	show_secret: 'Show secret key',
 	hide_secret: 'Hide secret key',
@@ -41,7 +41,7 @@ var translate_en = {
 	asset : 'Asset',
 	trust_limit : 'Trust Limit',
 	add_trust : 'Add trust from known anchors',
-	trust_src : 'This is a list of anchors from the Stellar community.',
+	trust_src : 'This is a list of anchors from the Masson Currency community.',
 	trust_note: 'Note: We do NOT endorse any of these anchors.',
 	trust_remove : 'Remove trust line',
 	trust_remove_desc : 'Trust is removable when balance is 0',
@@ -70,7 +70,7 @@ var translate_en = {
 	select_asset : 'Please select an asset to send.',
 	sending_to   : 'Sending to',
 	send_done    : 'Asset successfully sent.',
-	not_funded   : 'Not funded. To create this account, send it at least 1 lumens (XLM).',
+	not_funded   : 'Not funded. To create this account, send it at least 1 MAS (MAS).',
 	can_accept   : 'The account can accept',
 
 	/** Convert **/
@@ -151,7 +151,7 @@ var translate_en = {
 
 	/** ICO **/
 	ico : 'ICO',
-	ico_stellar : 'Using Stellar for ICOs',
+	ico_stellar : 'Using Masson Currency for ICOs',
 	ico_note: 'Note: Before becoming involved in an ICO, cryptocurrency investors and enthusiasts need to consider the risks involved when participating. We do NOT endorse any of these projects.',
 	ico_instruction: 'After adding the trust line, select "Trade - Convert". You can use any currency to purchase the ICO.',
 
@@ -159,7 +159,7 @@ var translate_en = {
 	settings : 'Settings',
 	network  : 'Network',
 	proxy    : 'Proxy',
-	switch_net      : 'Stellar Network',
+	switch_net      : 'Masson Currency Network',
 	switch_net_desc : 'The testnet is for, well, testing. It’s occasionally reset, so don’t get attached to any balances or accounts that you have on it.',
 	public_net : 'Public Network',
 	test_net   : 'Test Network',
@@ -179,11 +179,11 @@ var translate_en = {
 	save     : 'Save',
 	security : 'Security',
 	inflation : 'Inflation Destination',
-	inflation_desc : 'New lumens are added to the network at the rate of 1% each year. Each week, the protocol distributes these lumens to any account that gets over .05% of the “votes” from other accounts in the network.',
+	inflation_desc : 'New MAS are added to the network at the rate of 1% each year. Each week, the protocol distributes these MAS to any account that gets over .05% of the “votes” from other accounts in the network.',
 	inflation_done : 'Inflation Destination was set.',
 	inflation_options      : 'Inflation pools',
 	inflation_options_desc : 'You can join one of the following inflation pools. You can check their website to check the votes and the fee.',
-	inflation_xlmpool  : 'Vote to xlmpool.com',
+	inflation_MASpool  : 'Vote to MASpool.com',
 	inflation_lumenaut : 'Vote to lumenaut.net',
     inflation_moonpool : 'Vote to moonpool.space',
     inflation_donation : 'Support us',
@@ -195,12 +195,12 @@ var translate_en = {
 	domain_done : 'Home Domain was set.',
 	manage_data : 'Manage Data',
 	data_desc1  : 'Allows you to set,modify or delete a Data Entry (name/value pair) that is attached to a particular account. An account can have an arbitrary amount of DataEntries attached to it. Each DataEntry increases the minimum balance needed to be held by the account.',
-	data_desc2  : 'DataEntries can be used for application specific things. They are not used by the core Stellar protocol.',
+	data_desc2  : 'DataEntries can be used for application specific things. They are not used by the core Masson Currency protocol.',
 	data_key    : 'Data Entry Name',
 	data_value  : 'Data Entry Value',
 	data_done   : 'Data entry was set.',
 	delete_account : 'Delete Account',
-	merge_desc     : 'Danger operation! It transfers the native balance (the amount of XLM an account holds) to destination account and removes your account from the ledger.',
+	merge_desc     : 'Danger operation! It transfers the native balance (the amount of MAS an account holds) to destination account and removes your account from the ledger.',
 	dest_account   : 'Destination Account',
 	delete_warning : 'I KNOW EVERYTHING >>',
 	back           : 'Back',
@@ -222,9 +222,9 @@ var translate_en = {
 	will_recv : 'Recipient will receive',
 	can_send  : 'You can send',
 
-	Stellar : 'Stellar',
-	stellar_desktop_client : 'Stellar Desktop Client',
-	app_open_source  : 'This app is open source now.',
+	Stellar : 'Masson Currency',
+	stellar_desktop_client : 'Masson Currency Desktop Client',
+	app_open_source  : 'This app is open source.',
 	app_safe_notice  : 'The desktop client stores your login information locally on your computer. Please backup your secret carefully.',
 	app_feedback     : 'You can submit an issue on github if there are any problems.',
 	trade_volume : 'Trade Volume',
@@ -233,6 +233,6 @@ var translate_en = {
 	logout : 'Logout',
 
 	/** Error **/
-	NotFoundError : 'The resource was not found. You must have at least 1 lumen in your account for it to be activated! Each trust line or offer requires a 0.5 lumen reserve in addition. To make things easy, send at least 3 lumens to the account.',
-	changeTrustLowReserve : 'Not enough funds to create a new trust line. Each trust line requires a 0.5 lumen reserve in addition.'
+	NotFoundError : 'The resource was not found. You must have at least 1 MAS in your account for it to be activated! Each trust line or offer requires a 0.5 MAS reserve in addition. To make things easy, send at least 3 MAS to the account.',
+	changeTrustLowReserve : 'Not enough funds to create a new trust line. Each trust line requires a 0.5 MAS reserve in addition.'
 }

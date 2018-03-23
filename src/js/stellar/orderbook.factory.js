@@ -39,7 +39,7 @@ myApp.factory('StellarOrderbook', ['$rootScope', function($scope) {
 			issuer = code.issuer;
 			code = code.code;
 		}
-		return code == 'XLM' ? code : code + '.' + issuer;
+		return code == 'MAS' ? code : code + '.' + issuer;
 	}
 	
 	function getAsset(code, issuer) {
@@ -47,7 +47,7 @@ myApp.factory('StellarOrderbook', ['$rootScope', function($scope) {
 			issuer = code.issuer;
 			code = code.code;
 		}
-		return code == 'XLM' ? new StellarSdk.Asset.native() : new StellarSdk.Asset(code, issuer); 
+		return code == 'MAS' ? new StellarSdk.Asset.native() : new StellarSdk.Asset(code, issuer); 
 	}
 
 	return orderbook;

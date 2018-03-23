@@ -3,7 +3,7 @@
 	<div class="so-back islandBack islandBack--t">
 		<div class="island">
 			<div class="island__header">
-				{{ 'estimated' | translate}} <strong>{{estimated_value | number : 0}} XLM</strong>
+				{{ 'estimated' | translate}} <strong>{{estimated_value | number : 0}} MAS</strong>
 				<a class="btn btn-success btn-sm" ng-click="refresh()" ng-disabled="working">
 					<span class="glyphicon glyphicon-refresh"></span> {{'refresh' | translate}}</a>
 			</div>
@@ -19,7 +19,7 @@
 					<tr class="BalancesTable__row">
 						<td ng-init="native=gateways.getSourceById('')">
 							<gateway name="{{native.name}}" logo="{{native.logo}}"
-								website="{{native.website}}" code="XLM" address=""></gateway>
+								website="{{native.website}}" code="MAS" address=""></gateway>
 						</td>
 						<td class="BalancesTable__row__amount">
 							<span>{{balance | number : 7}}</span><br>

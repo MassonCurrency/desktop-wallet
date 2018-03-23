@@ -18,13 +18,13 @@ var nw = new NwBuilder({
 	        'src/node_modules/qrcode-generator/qrcode_UTF8.js',
 	        'src/node_modules/angular-qrcode/angular-qrcode.js'
 	],
-	platforms: ['win32', 'win64', 'osx64', 'linux64', 'linux32'],
+	platforms: ['win64'],
 	flavor : 'normal',
 	version: '0.28.1',
-	appName: 'StellarWallet',
+	appName: 'MassonCurrencyWallet',
 	appVersion : 'v3.6',
 	macIcns: 'src/img/rocket.icns',
-	winIco : 'src/img/rocket.ico'
+	winIco : 'src/img/maslogo_480.png'
 });
 
 nw.on('log', console.log);

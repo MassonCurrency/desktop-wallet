@@ -163,7 +163,7 @@ myApp.run(['$rootScope', '$window', '$location', '$translate', 'AuthenticationFa
 	$rootScope.reserve = 0;
 	$rootScope.lines = {}; // lines.CNY.xxx = {code: 'CNY', issuer: 'xxx', balance: 200, limit: 1000}
 	$rootScope.getBalance = function(code, issuer) {
-		if (code == 'XLM') {
+		if (code == 'MAS') {
 			return $rootScope.balance;
 		} else {
 			return $rootScope.lines[code] && $rootScope.lines[code][issuer] ? $rootScope.lines[code][issuer].balance : 0;

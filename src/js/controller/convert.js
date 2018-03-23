@@ -4,7 +4,7 @@ myApp.controller("ConvertCtrl", ['$scope', '$rootScope', 'StellarApi', 'SettingF
 	$scope.dst_amount = 0;
 	$scope.dst_currency = '';
 	$scope.init = function(){
-		$scope.send.push({code: 'XLM', issuer: ''});
+		$scope.send.push({code: 'MAS', issuer: ''});
 		for (var code in $rootScope.lines) {
 			for(var issuer in $rootScope.lines[code]) {
 				$scope.send.push({code: code, issuer: issuer});
@@ -19,7 +19,7 @@ myApp.controller("ConvertCtrl", ['$scope', '$rootScope', 'StellarApi', 'SettingF
 		$scope.asset = $scope.paths[code + '.' + issuer];
 	};
 	$scope.isLine = function(code, issuer) {
-		if (code == 'XLM') {
+		if (code == 'MAS') {
 			return code == $scope.asset.src_code;
 		} else {
 			return code == $scope.asset.src_code && issuer == $scope.asset.src_issuer;
@@ -49,10 +49,10 @@ myApp.controller("ConvertCtrl", ['$scope', '$rootScope', 'StellarApi', 'SettingF
 				data.records.forEach(function(item){
 					var alt = {
 						origin: item,
-						dst_code   : item.destination_asset_type == 'native' ? 'XLM' : item.destination_asset_code,
+						dst_code   : item.destination_asset_type == 'native' ? 'MAS' : item.destination_asset_code,
 						dst_issuer : item.destination_asset_type == 'native' ? '' : item.destination_asset_issuer,
 						src_amount : parseFloat(item.source_amount),
-						src_code   : item.source_asset_type == 'native' ? 'XLM' : item.source_asset_code,
+						src_code   : item.source_asset_type == 'native' ? 'MAS' : item.source_asset_code,
 						src_issuer : item.source_asset_type == 'native' ? '' : item.source_asset_issuer,
 					};
 					alt.precise = alt.src_code == 'BTC' ? 6 : 3;
@@ -66,7 +66,7 @@ myApp.controller("ConvertCtrl", ['$scope', '$rootScope', 'StellarApi', 'SettingF
 					if (alt.src_amount <= 0) {
 						isValid = false;
 					} else {
-						if (alt.src_code == 'XLM') {
+						if (alt.src_code == 'MAS') {
 							if ($rootScope.balance - alt.src_amount < 0) {
 								isValid = false;
 							}

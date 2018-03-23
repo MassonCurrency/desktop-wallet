@@ -7,6 +7,7 @@ myApp.factory('StellarHistory', ['$rootScope', function($scope) {
 		var self = this;
 		var page;
 		var address;
+		console.log('history.payments addressOrPage '+ addressOrPage);
 		if ('string' === typeof addressOrPage) {
 			address = addressOrPage;
 			page = this.server.payments().forAccount(address).order("desc").limit("20").call();
@@ -23,13 +24,13 @@ myApp.factory('StellarHistory', ['$rootScope', function($scope) {
 				case 'payment':
 					t.isInbound = r.to == address;
 					t.counterparty = t.isInbound ? r.from : r.to;
-					t.asset = r.asset_type == "native" ? {code: "XLM"} : {code:r.asset_code, issuer: r.asset_issuer};
+					t.asset = r.asset_type == "native" ? {code: "MAS"} : {code:r.asset_code, issuer: r.asset_issuer};
 					t.amount = parseFloat(r.amount);
 					break;
 				case 'create_account':
 					t.isInbound = r.account == address;
 					t.counterparty = t.isInbound ? r.source_account : r.account;
-					t.asset = {code: "XLM"};
+					t.asset = {code: "MAS"};
 					t.amount = parseFloat(r.starting_balance);
 					break;
 				default:
@@ -131,7 +132,7 @@ myApp.factory('StellarHistory', ['$rootScope', function($scope) {
 			case 'createAccount':
 				op.isInbound = op.destination == address;
 				op.counterparty = op.isInbound ? tx.source : op.destination;
-				op.asset = {code: "XLM"};
+				op.asset = {code: "MAS"};
 				op.amount = op.startingBalance;
 				break;
 			case 'pathPayment':

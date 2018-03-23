@@ -55,6 +55,7 @@ myApp.controller("SettingsCtrl", [ '$scope', '$rootScope', '$location', 'Setting
 						$scope.url;
 					}
 					
+					console.log('StellarApi.setServer ' + url + ' ' + $scope.network_type + ' ' + $scope.passphrase);
 					StellarApi.setServer(url, $scope.network_type, $scope.passphrase);
 					StellarApi.logout();
 					$rootScope.reset();

@@ -12,10 +12,10 @@ myApp.controller("TradeCtrl", [ '$scope', '$rootScope', 'StellarApi', 'StellarOr
 			this.bid = {};
 			for (var i=0; i<data.length; i++) {
 				var offer = data[i];
-				var buy_code = offer.buying.asset_type == 'native' ? 'XLM' : offer.buying.asset_code;
-				var buy_issuer = buy_code == 'XLM' ? '' : offer.buying.asset_issuer;
-				var sell_code = offer.selling.asset_type == 'native' ? 'XLM' : offer.selling.asset_code;
-				var sell_issuer = sell_code == 'XLM' ? '' : offer.selling.asset_issuer;
+				var buy_code = offer.buying.asset_type == 'native' ? 'MAS' : offer.buying.asset_code;
+				var buy_issuer = buy_code == 'MAS' ? '' : offer.buying.asset_issuer;
+				var sell_code = offer.selling.asset_type == 'native' ? 'MAS' : offer.selling.asset_code;
+				var sell_issuer = sell_code == 'MAS' ? '' : offer.selling.asset_issuer;
 				
 				this.all[offer.id] = {
 					id : offer.id,
@@ -72,7 +72,7 @@ myApp.controller("TradeCtrl", [ '$scope', '$rootScope', 'StellarApi', 'StellarOr
 			$scope.precise = 2;
 		}
 		
-		if ($scope.counter_code == 'XLM') {
+		if ($scope.counter_code == 'MAS') {
 			$scope.price_precise = 3;
 			$scope.value_precise = 3;
 		} else if ($scope.counter_code == 'BTC') {
@@ -244,7 +244,7 @@ myApp.controller("TradeCtrl", [ '$scope', '$rootScope', 'StellarApi', 'StellarOr
 		}
 	}
 	
-	//option {type:'buy', currency:'XLM', issuer: '', base: 'CNY', base_issuer: 'GXXX', amount: 100, price: 0.01}
+	//option {type:'buy', currency:'MAS', issuer: '', base: 'CNY', base_issuer: 'GXXX', amount: 100, price: 0.01}
 	$scope.offer = function(type) {
 		$scope[type + 'ing'] = true;
 		$scope[type + '_ok'] = false;
@@ -371,7 +371,7 @@ myApp.controller("TradeCtrl", [ '$scope', '$rootScope', 'StellarApi', 'StellarOr
 	}
 	
 	function sameAsset(code, issuer, code2, issuer2) {
-		if (code == 'XLM') {
+		if (code == 'MAS') {
 			return code == code2;
 		} else {
 			return code == code2 && issuer == issuer2;
@@ -379,6 +379,6 @@ myApp.controller("TradeCtrl", [ '$scope', '$rootScope', 'StellarApi', 'StellarOr
 	}
 	
 	function getAsset(code, issuer) {
-		return code == 'XLM' ? new StellarSdk.Asset.native() : new StellarSdk.Asset(code, issuer); 
+		return code == 'MAS' ? new StellarSdk.Asset.native() : new StellarSdk.Asset(code, issuer); 
 	}
 } ]);
